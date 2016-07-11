@@ -218,7 +218,7 @@ class SimpleUser
 		// http://php.net/manual/en/function.implode.php#51416 
 		// please note, the key value of the information is supposed to be the column name - this should
 		// be hard coded and is a security vulnerability if used as a dynamic value or user input
-		$SQL = 'INSERT INTO users ('.implode(", ", array_keys($information)).') VALUES (:'.implode(", :", array_keys($information)).')';
+		$SQL = 'INSERT INTO users ('.implode(", ", array_keys($information)).') VALUES (:'.implode(", :", $information).')';
 
 		$toInsert = array();
 
